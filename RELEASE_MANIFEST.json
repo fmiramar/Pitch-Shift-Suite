@@ -1,0 +1,1044 @@
+{
+  "format_version": 1,
+  "package": "PitchShiftSuite-source-0.1.0",
+  "prepared_date": "2026-11-08",
+  "status": "Source publication authorized by project owner on 2026-11-16; no binary release",
+  "development_base_commit": "c976d4b1214839fe3cea50dcfe43bf968a97d9be",
+  "source_snapshot": "Selected working-tree files, including changes after the base commit; this is not a clean commit export",
+  "license_exceptions": "See LICENSES.md and NOTICES.md; file labels do not supersede upstream notices",
+  "inventory_scope": "Every regular package file except RELEASE_MANIFEST.json itself; the archive checksum covers the manifest",
+  "compiled_artifacts_included": false,
+  "media_or_paper_files_included": true,
+  "git_history_included": false,
+  "pre_existing_development_files_preserved": 323,
+  "excluded_scope": [
+    "Scientific papers and private notes",
+    "Recordings and derived renders",
+    "Phase 8 capture-based candidate and capture tooling",
+    "Development history, build outputs and external checkouts"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 55,
+      "sha256": "d8e3039b8e1c1454fa837c558cfbaf85a63d256102daa7f6ec20ce0b568bc64f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "d07760116c5a93154c20c82e4c721f61675f6d576a658f842aabd020b9e8564d",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 20123,
+      "sha256": "fd663b12124e8df8feaee444474f94f67aef5b2b16bc87aebb78816934da9af8",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "d89f6f5e16b8d9482b7f8aa01f2a116e23721be8d4f2469bb8b4c9663a008d5a",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "CMakePresets.json",
+      "bytes": 2072,
+      "sha256": "e3a3dcee6e916cae65b00eab3d0e023b84a57607c349f045c4f7cf213052de58",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "013979d0252ae2ee13af645063a622cedd2de21f5132135d2b77e1412b3af558",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "DISTRIBUTION.md",
+      "bytes": 2437,
+      "sha256": "417053edae227643c955eb3163e5e6756235861bd12810be5193c698c753476d",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "license_scope": "License text: verbatim copying under its own terms",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "LICENSES.md",
+      "bytes": 2555,
+      "sha256": "c034f5c25ca8e71791ce21721e3aa3f5e34e3a0e95ef765334270104229385ec",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "957be243f9cd158d23f550eae480281d49edb6583cfaa2d8e2e916f34a47a27d",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "NOTICES.md",
+      "bytes": 6462,
+      "sha256": "ef155682d7fab2cde6a4f69d100c10a5cdacd93b317ed9c10f4fee170ad71f9a",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3055,
+      "sha256": "28acf1da33aa3f8f9249b2b2c62c3a8b28ed66d8d059b64ed5b7ee36c25743e1",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "7c69d7cbe05fa00f16d0fba8cf33bc82556b56ac89582f202a6f0964872adcd7",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "SOURCE_RIGHTS_REVIEW.md",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "origin": "Created for local source-rights review",
+      "sha256": "7c4a37c6917df9d94a3468a0b3c2820956ba64be667f3f36f27aef9894801f05",
+      "bytes": 2242
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 16983,
+      "sha256": "d67f2c19ce884648c90f32c67776082956f26f102fc17e878510d62c0d288fa3",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 4244,
+      "sha256": "6fb3ea57152a0acb9c86d7c0606b7ac5b4ba5a173b348b25ddff92fa9ada82f7",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "docs/algorithms/A01-spectral-hybrid.md",
+      "bytes": 2683,
+      "sha256": "89278a48ba787aeee4d42c6d6d506fc892483aea3130a269ab8497aae01a2a92",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "f1f959d45a51317ace36649795329c010a979f95294e419cdd7924b71bf89aa6",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A02-rubberband-r2.md",
+      "bytes": 2379,
+      "sha256": "404433aacee00226061f68bcea86dd48bc8d93ef536c700d0daa84b9f561e054",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "7d227b28ad9cc5a5a6653ad4caef7eda299fe85019dd02a285beee910e0abf8a",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A03-rubberband-r3.md",
+      "bytes": 2332,
+      "sha256": "6a28ce939c5d497bb66bfc88208822b5e082e2cd17354d34bffb0a38b0a4c747",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "d78a54331f9c9b2070828eb44a25f03a8f752388157dd6c9d7c83307a84d90a9",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A04-rubberband-live.md",
+      "bytes": 2334,
+      "sha256": "8c2e6b693f1080c3843c727d015324fe4a5953a00e42370c18f965611527223a",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "d0e6055d4c9ba264d4332eab7a1c013d7cd6a32770f4b00b59aa8d6bab060051",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A05-erb-phase.md",
+      "bytes": 5200,
+      "sha256": "e3e87ed9b5e3340d5de0ae2022798b35d54ba0f1d209901c654e9867805fabb4",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "33fe38fe13060db16ccaac72008dd33143f45f4baf935e5098368c2310b75836",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A06-erb-ssb.md",
+      "bytes": 5454,
+      "sha256": "4a602e4c04b63c4bfbf8a3cc4fe8683517d99fe6d4b10c8d6d0aad469406262b",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "02c3ad980352e4cdb4d1bad8064a493da2d54e8ccdc27ef98814fc3fe50b97a4",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A07-pv-integer.md",
+      "bytes": 5549,
+      "sha256": "c00c7fcfbe3fc9b8d769c7bb73a9d3ad6a1f8da30efe9ac944cfa6d2f5cb4619",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "10b23315266caa9ae0d615fb7a4cd88f701443bdd3d47198f6bd82d814c476ef",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A08-ocean.md",
+      "bytes": 4708,
+      "sha256": "4c161cdbf46cd0a76583e9be3f1704603ff340d5aa25cefbf078f7d21daf53a3",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "4abd057272114b4c396d6d9f2adb26782c3068b45980cc7f6af591e072115b06",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A09-phase-locked.md",
+      "bytes": 5022,
+      "sha256": "25f8ec96ef31d58cfe9c47e958a4b44f026d61dbff37b905a40567000aab1265",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "5c26b742c611374371ae900c56f81610614ae32cdbc4000ed61d6598219ddf4e",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A10-ola.md",
+      "bytes": 2122,
+      "sha256": "bea624fa3c35b1850be66255b1ed8ba1f68b8a1dc6a211f27063c2cc22f05f9d",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "5269403b85e26bb3b1e8743ef2ce9d21ff723d7e356d10ae28ce7e5108a9193b",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A11-wsola.md",
+      "bytes": 2223,
+      "sha256": "30a6f9d3000c2c0bb3c1612d90ccde2d5206888cd0adcd394fae1ed16141911a",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0afe6c4859dd62f1819efd3e0f8bd403b86d47d12dab29c36563d71433a17311",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A12-subband-phase-half.md",
+      "bytes": 6625,
+      "sha256": "1d38f01881d265b1ff438627b89f0117efb99c4f0ec0b8478f2e5020558a6b05",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "10d419e14d187baa17749ce9a6be501ccaf9ccf1d5f8fd6515cbac83c1d3dbae",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A13-multirate-octave.md",
+      "bytes": 5555,
+      "sha256": "f6e5c376cfb47b82c81975d886d713fea1c53f73410f4149ceaf199f1b1c5143",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "215e4d522645f64551ba9b7ff665a3f6bfd072b7e9ce50be53a5ede68128c51d",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A14-sinusoidal-residual.md",
+      "bytes": 6841,
+      "sha256": "aadd67468b54c86901341aa68e57c7889a8e6fd98dcb9bb17e305a007c3d37f1",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "b9534400aae0f633137270b3888c27024f1ed6855ba6f6bf0cc64bd6e90a7755",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "docs/algorithms/A16-low-latency-spectral.md",
+      "bytes": 5144,
+      "sha256": "3dcf749d834d1ad03c89b8779e80a56d26f2736283eb03f90ddb85e79457584f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "4535d992249cface797be38ba9558420e35b10c1457344dd815d1b558345bd46",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "licenses/GPL-2.0.txt",
+      "bytes": 30260,
+      "sha256": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5",
+      "license_scope": "License text: verbatim copying under its own terms",
+      "origin": "Created for this local release draft or copied license text; see notices"
+    },
+    {
+      "path": "modules/rubberband/CMakeLists.txt",
+      "bytes": 2554,
+      "sha256": "2b6658c353e877da1f56f0c6e6baef968b2a3011a590d521d021ba00259b19e2",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "2b6658c353e877da1f56f0c6e6baef968b2a3011a590d521d021ba00259b19e2",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/README.md",
+      "bytes": 2576,
+      "sha256": "31688a9d19018bc1cce8796d47ef9c0885a0514be7f7351ba0deb044a9bf5c64",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "81e6d6e320d3e94cd6bf43c41fad6bcf957b0f0b4c76e6d1b17dae96930e0d6a",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "modules/rubberband/RubberBandEngine.hpp",
+      "bytes": 5294,
+      "sha256": "97e50b80eb1b290cf3d0989db747a11d6d746bf523f4440d6d7aead6c909be16",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "97e50b80eb1b290cf3d0989db747a11d6d746bf523f4440d6d7aead6c909be16",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/RubberBandLiveEngine.hpp",
+      "bytes": 3910,
+      "sha256": "9819b9bd4d280f71dcf20a7c9e0543d2cdba0cfcff7b3c2308dcc78e0bffc7bc",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "9819b9bd4d280f71dcf20a7c9e0543d2cdba0cfcff7b3c2308dcc78e0bffc7bc",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/RubberBandLiveShift.cpp",
+      "bytes": 3372,
+      "sha256": "2d89a4985820784343cc95677074e1b782e160e15e7f59cad3042fea3fb82245",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "2d89a4985820784343cc95677074e1b782e160e15e7f59cad3042fea3fb82245",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/RubberBandShifts.cpp",
+      "bytes": 3865,
+      "sha256": "624b676a2ebe4b939f2dc30812f866c9e704593c61c2b2cd1b2e511bda9627f2",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "624b676a2ebe4b939f2dc30812f866c9e704593c61c2b2cd1b2e511bda9627f2",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/RubberBandShifts.sc",
+      "bytes": 387,
+      "sha256": "5d5867ae73d91be0e3d2944692c5c6083408c3d03376a0a20cbbbe3a1c3bd660",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "5d5867ae73d91be0e3d2944692c5c6083408c3d03376a0a20cbbbe3a1c3bd660",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "modules/rubberband/sources.json",
+      "bytes": 1083,
+      "sha256": "7c95d5475ca2873d257014d72299889e72bc27654b6cb271b5f666059b024928",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "7c95d5475ca2873d257014d72299889e72bc27654b6cb271b5f666059b024928",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/ERBPhaseOctave.sc",
+      "bytes": 180,
+      "sha256": "d0a2ed7c425ea3d5944601d5694a36e72e233cc5ca239aeff250b0b513cba657",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "d0a2ed7c425ea3d5944601d5694a36e72e233cc5ca239aeff250b0b513cba657",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/ERBSSBOctave.sc",
+      "bytes": 178,
+      "sha256": "4beccdd164c3bff2df55aeb8089de75ceddb5e5141d89d1c92f3bed567cb58af",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "4beccdd164c3bff2df55aeb8089de75ceddb5e5141d89d1c92f3bed567cb58af",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/LowLatencySpectralShift.sc",
+      "bytes": 286,
+      "sha256": "a81550fde8a79a0aca9d8d87a02942b0419dba499ae5050a43feae385466db5b",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "a81550fde8a79a0aca9d8d87a02942b0419dba499ae5050a43feae385466db5b",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/MultirateOctaveShift.sc",
+      "bytes": 283,
+      "sha256": "c5a0970c16f3f385266e153167a8714a32f513d7c2c4e8773c43d76b90875de8",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "c5a0970c16f3f385266e153167a8714a32f513d7c2c4e8773c43d76b90875de8",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/OCEANOctave.sc",
+      "bytes": 177,
+      "sha256": "09493bb0f314e3ab1a811d0f21e6299ee53f7324f3d8d3d4b87862bd4a1785fe",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "09493bb0f314e3ab1a811d0f21e6299ee53f7324f3d8d3d4b87862bd4a1785fe",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/OLAStretchShift.sc",
+      "bytes": 488,
+      "sha256": "94bedd50cb8ee04e80faba3bfd3f216e429acc60cf58a425283eea5363716b27",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "94bedd50cb8ee04e80faba3bfd3f216e429acc60cf58a425283eea5363716b27",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/PVIntegerOctave.sc",
+      "bytes": 296,
+      "sha256": "9d75a8ed8e22296045149e6b5bba6742fc96ddfd924fcf087e6da330caedac4d",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "9d75a8ed8e22296045149e6b5bba6742fc96ddfd924fcf087e6da330caedac4d",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/PhaseLockedShift.sc",
+      "bytes": 451,
+      "sha256": "e503b30b5525e9958746ff0929016c1eb0d1307a3c8b4f0f8dcd467ccf89ca8f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "e503b30b5525e9958746ff0929016c1eb0d1307a3c8b4f0f8dcd467ccf89ca8f",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/SinusoidalResidualShift.sc",
+      "bytes": 401,
+      "sha256": "bbd084666f34acced9317c3a6e4dfdb7cea8afa9251529f9e517e5d9386dc4b4",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "bbd084666f34acced9317c3a6e4dfdb7cea8afa9251529f9e517e5d9386dc4b4",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/SpectralHybridShift.sc",
+      "bytes": 303,
+      "sha256": "0ab2c8dc769939817bfa46bfa612124986aed74bae51d87badd4fb383cc7dd64",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0ab2c8dc769939817bfa46bfa612124986aed74bae51d87badd4fb383cc7dd64",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/SubbandPhaseHalf.sc",
+      "bytes": 182,
+      "sha256": "1904ca7ff94f0e1aadab92cb52a2a33aa5d6839e365be535ac3de594dc39a257",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "1904ca7ff94f0e1aadab92cb52a2a33aa5d6839e365be535ac3de594dc39a257",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/Classes/WSOLAStretchShift.sc",
+      "bytes": 490,
+      "sha256": "0607dc7690c9e06da20136fbd590c87f96598541fc344ddeac2d0ebe8be14ddf",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0607dc7690c9e06da20136fbd590c87f96598541fc344ddeac2d0ebe8be14ddf",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/README.md",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "f7693191dfea230ce9feccafef14b8105598f366397e9c4f2b0e2f0b489acda7",
+      "bytes": 646
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/guitar-CC0.txt",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "42528c42437b275302b09ce5263ee79947c75637566592c6585d7bba2c7cf4fc",
+      "bytes": 672044
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/guitar-polyphonic.wav",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "97f57629ef59cbc7024c58830b27c493ddeb4aca1056a4f9cddea8857176fcd9",
+      "bytes": 672044
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/piano-CC0.txt",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/piano-monophonic.wav",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "8cc3d5fb38c0cfb2ed59e7c10b94ad41437867e7ea70f7fa44fee26953f05b99",
+      "bytes": 672044
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "464f3407b0b9aeccea536ff87dd98a904c712ac14c05831ab3792fc0c1d6e2d2",
+      "bytes": 672044
+    },
+    {
+      "path": "sc/HelpSource/Audio/PitchShiftSuite/sources.json",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "CC0-1.0 recordings/arrangements and upstream dedication texts; project source records/documentation GPL-3.0-or-later",
+      "sha256": "1671fed7d68380de8510c51ddfb9f116a8c86fcaae337ba0d1efdb4e02c1a31f",
+      "bytes": 6298
+    },
+    {
+      "path": "sc/HelpSource/Classes/ERBPhaseOctave.schelp",
+      "bytes": 3682,
+      "sha256": "c5912a9d4094567bf752799e6bec44b2ef4e366adf3be708a39188418210904a",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "033ffa1373899f3635b875f17ed3291ed86e2cb76203b9de7a906667cdec604b",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/ERBSSBOctave.schelp",
+      "bytes": 3545,
+      "sha256": "9c82e6f78e0990451f154c3c572feebaf48c0c581f536a4cecd95f72920504cd",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "e9bd5bf742a64d1d6d45a0ced27ae4109814b3333e8b73f6d6a779b72a51fd3c",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/LowLatencySpectralShift.schelp",
+      "bytes": 3637,
+      "sha256": "49e85715af77ed60fa91305f1bd3ea07c90dfa96bded42bc94392cc7fafa9f77",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "3c5265d6822cafff00f2f70bd54ea05878092e887b7690b2f2d7afd0fbc4758b",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/MultirateOctaveShift.schelp",
+      "bytes": 3702,
+      "sha256": "7f8e1c68812232dcc6ac8b5289fc03d74abfabdd448b0fad39b1d502609c034c",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0cb779aa44b87477033732528c365bd6f1c6ad530e5191bbba46f6e2ea8d9369",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/OCEANOctave.schelp",
+      "bytes": 3530,
+      "sha256": "ace1b772ad70a2f8819ac6888b52410f8336e14f1b9d677ad477d2eca8db53d4",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "5a3a8136aae877193c13437e5ea12781439a240bcb094a1d10bdf31f05389d0b",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/OLAStretchShift.schelp",
+      "bytes": 3968,
+      "sha256": "c7ebe47d986a735f15b8721a636530da50ed061b3b392ead8f0e55c9044d2274",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "34e10db655f3cfaf1da17ffdf118dc11095dc0725a9890a58c3f8846b138c0c9",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/PVIntegerOctave.schelp",
+      "bytes": 3654,
+      "sha256": "d4a5cec990d77050fd2e2f2c66c0148d09f2014e2c68b68b884f110311b5c697",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "38c8411adedccf548a9a41f4b0d1e786f9f277c12f7604573fcfd1b9bf361e85",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/PhaseLockedShift.schelp",
+      "bytes": 4131,
+      "sha256": "e31623c7bada7c4b6bd0a3fe6bf52d5db82f47dc391442dfa8ce568e448a6bb5",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0458f07c86a9b9d6a0a351bf7ec64cf54cf1ed8134e97525e5a5fa29736a237f",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/RubberBandLiveShift.schelp",
+      "bytes": 3638,
+      "sha256": "5691310b087482a40222c50cde5368d59517e3a2a5c809faccdb806525b37a19",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "530d1a8673970f043373f1399fe91c8795893c2e8a7d47423af6871120a3115e",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/RubberBandR2Shift.schelp",
+      "bytes": 3651,
+      "sha256": "28c2cee531b555e14ef3498852f68293abbbd605dfb7b42885f7179ab72bbdc9",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "05e0f7f3aaf3a0b23e80596359c9761c51f30031017a2f0826b796ca906208da",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/RubberBandR3Shift.schelp",
+      "bytes": 3569,
+      "sha256": "cd4816e448495ec19ce9c3122834719c1e8b1852e53010599124a42368f4a002",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "2448145e04059a8e05dc5f031153b6c0d63ef3322cf80f22f44d1ed1c58614b0",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/SinusoidalResidualShift.schelp",
+      "bytes": 3906,
+      "sha256": "3d4d095350a275c67cb760d6f52459747dd512f9c40bf43f91f66db76b904635",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "aecbc2f958e5bc467a7cb1288f04e459cf8d9bedf633f79f844d7b5a34b37549",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/SpectralHybridShift.schelp",
+      "bytes": 4082,
+      "sha256": "a7b878b6cccc2460678b84c00bfd3843119a76b905316ae3a7e387179fc72828",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "389af8382f0322dde9e9de46ec20432e8749a5c1ae2d4351707e2d70d6093ee2",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/SubbandPhaseHalf.schelp",
+      "bytes": 3623,
+      "sha256": "1a92f5da20cb180ca972a28c38159b2d7112ef62c731057951a34f9823fc71fd",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "fc3a77f8c6b1017bcdffa3b1e659f5e43d8e69b2959d2f71d5c874e2e5db33ee",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Classes/WSOLAStretchShift.schelp",
+      "bytes": 4021,
+      "sha256": "f7d99c2720ab976ab2a6e06e488b001aa0aff82a15b087b35a0d687f5bcf41c7",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "dafed00835ed35f37a8f588fc59c0e2eee40d09a915845bbb4fab93134cc0df7",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "sc/HelpSource/Guides/PitchShiftSuite.schelp",
+      "origin": "Pitch Shift Suite guide/audio update 2026-11-16",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "sha256": "a22457d3801958267aa257fe9d17171b26ce3c4db11c375c4d02f10eeb7441cf",
+      "bytes": 8023
+    },
+    {
+      "path": "src/dsp/ERBPhaseOctave.hpp",
+      "bytes": 3384,
+      "sha256": "aed5c9061955034aa39186b9619fd5251749e58e25132601d8d0aed9740de279",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "aed5c9061955034aa39186b9619fd5251749e58e25132601d8d0aed9740de279",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/ERBSSBOctave.hpp",
+      "bytes": 3338,
+      "sha256": "834a2b01393d8e2d16d4606da608d5d8423148771fbe5623ba398e2371335811",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "834a2b01393d8e2d16d4606da608d5d8423148771fbe5623ba398e2371335811",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/LowLatencySpectralShift.hpp",
+      "bytes": 5795,
+      "sha256": "28afa3582eab297be42ee8be52c50d1be5dca78b21188d029fff1a4793ccde12",
+      "license_scope": "GPL-3.0-or-later for project contributions; MIT adaptation notice also applies",
+      "development_source_sha256": "28afa3582eab297be42ee8be52c50d1be5dca78b21188d029fff1a4793ccde12",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/MultirateOctaveShift.hpp",
+      "bytes": 2272,
+      "sha256": "e09f8c76711b2a6fb3f3871cb5af5e16fa2bf049cb0fb9a7d9b414f4e64eca63",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "e09f8c76711b2a6fb3f3871cb5af5e16fa2bf049cb0fb9a7d9b414f4e64eca63",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/OCEANOctave.hpp",
+      "bytes": 4772,
+      "sha256": "684dcc654950b7734d865850d2ca185ad528ff868b7458c4401ed31146d798fa",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "684dcc654950b7734d865850d2ca185ad528ff868b7458c4401ed31146d798fa",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/OLAStretchShift.hpp",
+      "bytes": 6647,
+      "sha256": "8b4a6bcde96188bcd6c1872efa66deee380554a9c1693a464c62efac8afd129f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "8b4a6bcde96188bcd6c1872efa66deee380554a9c1693a464c62efac8afd129f",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/PVIntegerOctave.hpp",
+      "bytes": 6299,
+      "sha256": "e34d06128686cc9e0516959f01a304ee8a5aff5fc3b1433c1d338f4e97b84829",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "e34d06128686cc9e0516959f01a304ee8a5aff5fc3b1433c1d338f4e97b84829",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/PhaseLockedShift.hpp",
+      "bytes": 9388,
+      "sha256": "4bdc9f8b44a1e8051a22fa09ca45edd96d32484f3e15daf97e0f557c358bbdec",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "4bdc9f8b44a1e8051a22fa09ca45edd96d32484f3e15daf97e0f557c358bbdec",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/SinusoidalResidualShift.hpp",
+      "bytes": 10443,
+      "sha256": "283ca807ca4f407d1fe1749c723647d3dfa4611bf23e7ea5b160996f24938a59",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "283ca807ca4f407d1fe1749c723647d3dfa4611bf23e7ea5b160996f24938a59",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/SpectralHybridShift.hpp",
+      "bytes": 1718,
+      "sha256": "122b6cb277f7a11b32b9afc885ae66ce05585783716bbeb03c11918f4b2da6b4",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "122b6cb277f7a11b32b9afc885ae66ce05585783716bbeb03c11918f4b2da6b4",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/SubbandPhaseHalf.hpp",
+      "bytes": 4574,
+      "sha256": "0b4cb72cb72a7667bfd34422d0f472dfab5c70b1ae71a8214285195e85d149ae",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "0b4cb72cb72a7667bfd34422d0f472dfab5c70b1ae71a8214285195e85d149ae",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/dsp/WSOLAStretchShift.hpp",
+      "bytes": 583,
+      "sha256": "231f2182a73464ee5557609c5e9228f079db120d675962290e4181e9b578e111",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "231f2182a73464ee5557609c5e9228f079db120d675962290e4181e9b578e111",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/ERBPhaseOctave.cpp",
+      "bytes": 3108,
+      "sha256": "9f940c5612d1d20682f6654daa38fe1458eaf8335e4cbee192f23e2e27eaf740",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "9f940c5612d1d20682f6654daa38fe1458eaf8335e4cbee192f23e2e27eaf740",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/ERBSSBOctave.cpp",
+      "bytes": 3078,
+      "sha256": "6656bad427fde40ef8a06d489062ca714f97e0e51744e01e6b4a0ed4ad6d344f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "6656bad427fde40ef8a06d489062ca714f97e0e51744e01e6b4a0ed4ad6d344f",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/LowLatencySpectralShift.cpp",
+      "bytes": 3442,
+      "sha256": "bb9ddee53583edaa25fab92a4bc4b9f3a1933a3cce169955307ee0f4bf9b396c",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "bb9ddee53583edaa25fab92a4bc4b9f3a1933a3cce169955307ee0f4bf9b396c",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/MultirateOctaveShift.cpp",
+      "bytes": 3364,
+      "sha256": "450d65d36b74bc80711c7519db1f688d35a3085656583aa28ffe9258f4865b22",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "450d65d36b74bc80711c7519db1f688d35a3085656583aa28ffe9258f4865b22",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/OCEANOctave.cpp",
+      "bytes": 3065,
+      "sha256": "9f3814f3e30a165eca006161a91cd42499553b9e2eb6a66d29926a332adcf44a",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "9f3814f3e30a165eca006161a91cd42499553b9e2eb6a66d29926a332adcf44a",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/OLAStretchShift.cpp",
+      "bytes": 3483,
+      "sha256": "24de5408ccd62a5737a79ad9128ae01ab6aae5acac2d49d053a7095ee72d335e",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "24de5408ccd62a5737a79ad9128ae01ab6aae5acac2d49d053a7095ee72d335e",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/PVIntegerOctave.cpp",
+      "bytes": 3283,
+      "sha256": "77309b3683aadfec0c4dae236b72e2a1e460e7a529d78f92df5001417892f73c",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "77309b3683aadfec0c4dae236b72e2a1e460e7a529d78f92df5001417892f73c",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/PhaseLockedShift.cpp",
+      "bytes": 3506,
+      "sha256": "433b9d652547048dcc12e767760678c831f17328c267f702b5c90a71565ab106",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "433b9d652547048dcc12e767760678c831f17328c267f702b5c90a71565ab106",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/SinusoidalResidualShift.cpp",
+      "bytes": 3448,
+      "sha256": "af26a0cc1b7a95760347eb48c3b083ada3597edd73f6acd1e473f7f250c9bcac",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "af26a0cc1b7a95760347eb48c3b083ada3597edd73f6acd1e473f7f250c9bcac",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/SpectralHybridShift.cpp",
+      "bytes": 3220,
+      "sha256": "336c096631f83445192f116e137b2296d8cc82c7dde1c949d80a73a053780b3d",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "336c096631f83445192f116e137b2296d8cc82c7dde1c949d80a73a053780b3d",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/SubbandPhaseHalf.cpp",
+      "bytes": 3138,
+      "sha256": "cdc302e2df678e243b00fd6c0794754b119adc06329b5ab8609524ca20377109",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "cdc302e2df678e243b00fd6c0794754b119adc06329b5ab8609524ca20377109",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "src/sc/WSOLAStretchShift.cpp",
+      "bytes": 3513,
+      "sha256": "f2b9f2071329bb8ceeea0d421b443fc62512409343fb7fa11d6c383ddd19602f",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "f2b9f2071329bb8ceeea0d421b443fc62512409343fb7fa11d6c383ddd19602f",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/erb_phase_smoke.cpp",
+      "bytes": 5758,
+      "sha256": "87579dc1aab1bc0e43eef96d6883a21bb07954b70e84cc84745ea7cee06c3db0",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "87579dc1aab1bc0e43eef96d6883a21bb07954b70e84cc84745ea7cee06c3db0",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/erb_ssb_smoke.cpp",
+      "bytes": 6958,
+      "sha256": "2a736c5e8a4a2a24cc073c89be8d801f4adfc5b87448f6b9054bae143bae459b",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "2a736c5e8a4a2a24cc073c89be8d801f4adfc5b87448f6b9054bae143bae459b",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/licenses/terrarium-MIT.txt",
+      "bytes": 1073,
+      "sha256": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/low_latency_smoke.cpp",
+      "bytes": 5241,
+      "sha256": "b2df7b83aae80f9e33c5f42009c6687360af020418d6f02a5e2d90004b998c5e",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "b2df7b83aae80f9e33c5f42009c6687360af020418d6f02a5e2d90004b998c5e",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/multirate_smoke.cpp",
+      "bytes": 5444,
+      "sha256": "167ed3ad07e3d3053628769498c41d04e5b8bab36f5314661a47b08a7ffb916c",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "167ed3ad07e3d3053628769498c41d04e5b8bab36f5314661a47b08a7ffb916c",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/ocean_smoke.cpp",
+      "bytes": 7045,
+      "sha256": "3872fb51433a0dc8ff96ee39b46e74f10f042d749928a2cd04db1304dc7685e8",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "3872fb51433a0dc8ff96ee39b46e74f10f042d749928a2cd04db1304dc7685e8",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/ola_smoke.cpp",
+      "bytes": 4917,
+      "sha256": "3425a2b88e48897031bdad059e0a85580cd926a020dcecc9d8daf5b8b3f5275d",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "3425a2b88e48897031bdad059e0a85580cd926a020dcecc9d8daf5b8b3f5275d",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/phase_half_smoke.cpp",
+      "bytes": 6567,
+      "sha256": "45da63e2e8745ba805ade6d86e193fbcee857396ff12f716f09616d9f8f77ba5",
+      "license_scope": "GPL-3.0-or-later for project contributions; MIT adaptation notice also applies",
+      "development_source_sha256": "45da63e2e8745ba805ade6d86e193fbcee857396ff12f716f09616d9f8f77ba5",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/phase_locked_smoke.cpp",
+      "bytes": 8188,
+      "sha256": "65584a1ee28bc245db2bd9af670fc9ebe85d266b33928d0aedf55b77a5c15b4e",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "65584a1ee28bc245db2bd9af670fc9ebe85d266b33928d0aedf55b77a5c15b4e",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/pv_integer_smoke.cpp",
+      "bytes": 7641,
+      "sha256": "b92cced333e9beaadea4e849091ad8402bc92af2756796fd1e49fd22c0edace0",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "b92cced333e9beaadea4e849091ad8402bc92af2756796fd1e49fd22c0edace0",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/rubberband_live_smoke.cpp",
+      "bytes": 5004,
+      "sha256": "fed025d8f4d932c97b6a826533ca06385851028421689b369f392c42b4f3d8fe",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "fed025d8f4d932c97b6a826533ca06385851028421689b369f392c42b4f3d8fe",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/rubberband_smoke.cpp",
+      "bytes": 4753,
+      "sha256": "379e20b8a51f4e13ad7a46a9e6cf3b6ec50ebc6fb33574f66fc1d3168ca1c2f2",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "379e20b8a51f4e13ad7a46a9e6cf3b6ec50ebc6fb33574f66fc1d3168ca1c2f2",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/sc_help_smoke.py",
+      "bytes": 3965,
+      "sha256": "6bb6fd7bccad13aaaa0a9b95bc8875cc1d6dcac0f4e03dd9ac18be2c5a366943",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "98ae93fd18be7d0383c6415a144e276c9502ee408dbfaef4ba83c32a1f2cb8ac",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "tests/sc_identity_nrt.py",
+      "bytes": 1438,
+      "sha256": "bffcc5838c4566e881b59e31d478f119c8028f6a0b1d7e2a580c64f5cfc67cfe",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "de74ad9eded98677f6e52dc4fc79a080e0d15c09fbafb35af1f7520869aebe99",
+      "unchanged_from_development_source": false
+    },
+    {
+      "path": "tests/signalsmith_smoke.cpp",
+      "bytes": 3779,
+      "sha256": "24f1739f85da93a1e71e90758a8652cbf60ae3ea9329da31f0d2a46dd1c27a13",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "24f1739f85da93a1e71e90758a8652cbf60ae3ea9329da31f0d2a46dd1c27a13",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/sinusoidal_smoke.cpp",
+      "bytes": 5611,
+      "sha256": "afe48904e42b527fd6467683cb80320c1b9aeed1a656de396bd911afa9e7a175",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "afe48904e42b527fd6467683cb80320c1b9aeed1a656de396bd911afa9e7a175",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "tests/wsola_smoke.cpp",
+      "bytes": 4929,
+      "sha256": "bcc78024d8cbea50d666c55e9c63bb83803c044e275ba8ba6dddd28ac780dc66",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "bcc78024d8cbea50d666c55e9c63bb83803c044e275ba8ba6dddd28ac780dc66",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/README.md",
+      "bytes": 1304,
+      "sha256": "3804a42dae01840bb2c08cb2766df6f8d6e52d2517f376eaaa91a37b37b38f6b",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "3804a42dae01840bb2c08cb2766df6f8d6e52d2517f376eaaa91a37b37b38f6b",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/juillerat-ocean/LICENSE.txt",
+      "bytes": 1078,
+      "sha256": "ffd77f497e3d66c8fa460dba3349c8653b01d2a3097261f1aefc2f87e4f5daac",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "ffd77f497e3d66c8fa460dba3349c8653b01d2a3097261f1aefc2f87e4f5daac",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/juillerat-ocean-sources.json",
+      "bytes": 2122,
+      "sha256": "57150b11a00b3dc1f747998fdf3adaed5883639ec706844440e0810d5cac15e7",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "57150b11a00b3dc1f747998fdf3adaed5883639ec706844440e0810d5cac15e7",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/LICENSE.txt",
+      "bytes": 1074,
+      "sha256": "072b5e9eb5b22880bdf6256324654cf3ce53dba828edb911921121e1be09d9c3",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "072b5e9eb5b22880bdf6256324654cf3ce53dba828edb911921121e1be09d9c3",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/approx.h",
+      "bytes": 4956,
+      "sha256": "bf6f703193253a241e7a80d44547bb73c383a9a1f1ebe1f7fefdcf3d234515bd",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "bf6f703193253a241e7a80d44547bb73c383a9a1f1ebe1f7fefdcf3d234515bd",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/fft.h",
+      "bytes": 45242,
+      "sha256": "fb55f69ac14cdbac66b9c76053069ff63bc36d18af20d8c028b9acc0aad6516a",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "fb55f69ac14cdbac66b9c76053069ff63bc36d18af20d8c028b9acc0aad6516a",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/linear.h",
+      "bytes": 36602,
+      "sha256": "bf0d23a37efd4d89e5baf2b2969374748f23690697a5158774feb0d00cf9502b",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "bf0d23a37efd4d89e5baf2b2969374748f23690697a5158774feb0d00cf9502b",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/platform/fft-linear.h",
+      "bytes": 7270,
+      "sha256": "7c2ed61df7895af7b1a37f1073f833abdc971953277ece58128c9c7b4ca6cef2",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "7c2ed61df7895af7b1a37f1073f833abdc971953277ece58128c9c7b4ca6cef2",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-linear/stft.h",
+      "bytes": 24361,
+      "sha256": "20f3695bb8d162cf4b3f1aacdca477f0c8a301ffebd6fec53b437e9ce623462b",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "20f3695bb8d162cf4b3f1aacdca477f0c8a301ffebd6fec53b437e9ce623462b",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-sources.json",
+      "bytes": 1132,
+      "sha256": "088ebb5439d75f7b70c34da8616e85e5815d1d304fe2cca75cd5da79a6b07a90",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "088ebb5439d75f7b70c34da8616e85e5815d1d304fe2cca75cd5da79a6b07a90",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-stretch/LICENSE.txt",
+      "bytes": 1093,
+      "sha256": "ee2ef82481ffb445ecdd4b3a4c1f82c0cddb2da8fe39d8e8dc384fffb3e7f06f",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "ee2ef82481ffb445ecdd4b3a4c1f82c0cddb2da8fe39d8e8dc384fffb3e7f06f",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/signalsmith-stretch/signalsmith-stretch.h",
+      "bytes": 35446,
+      "sha256": "1188667959ac19dd40c0a6abbce694e44705615ec4f0e8db8af0f1cfb4c5dea7",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "1188667959ac19dd40c0a6abbce694e44705615ec4f0e8db8af0f1cfb4c5dea7",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/terrarium/BandShifter.hpp",
+      "bytes": 4901,
+      "sha256": "d88b8eba08f5fac515383673c571ac1957c8ee30d96d42113495b556a96c24e0",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "d88b8eba08f5fac515383673c571ac1957c8ee30d96d42113495b556a96c24e0",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/terrarium/FastSqrt.hpp",
+      "bytes": 934,
+      "sha256": "6668b7712d60ec3951570a2c31e9f8c761464fe5c2cd3d011c6b39273c02d97e",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "6668b7712d60ec3951570a2c31e9f8c761464fe5c2cd3d011c6b39273c02d97e",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/terrarium/LICENSE",
+      "bytes": 1073,
+      "sha256": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/terrarium/Multirate.hpp",
+      "bytes": 8198,
+      "sha256": "49da95123cdfd636b3798094da2a31095b8d4f2d21db11f74ffcf9ee0b82daee",
+      "license_scope": "MIT; retain upstream notice",
+      "development_source_sha256": "49da95123cdfd636b3798094da2a31095b8d4f2d21db11f74ffcf9ee0b82daee",
+      "unchanged_from_development_source": true
+    },
+    {
+      "path": "third_party/terrarium-sources.json",
+      "bytes": 3682,
+      "sha256": "747ef3f3c7fb9ec50d9584c3548e8a272503878eb36b1834a7a0177bb534e41c",
+      "license_scope": "GPL-3.0-or-later (project contributions)",
+      "development_source_sha256": "747ef3f3c7fb9ec50d9584c3548e8a272503878eb36b1834a7a0177bb534e41c",
+      "unchanged_from_development_source": true
+    }
+  ],
+  "project_license": "GPL-3.0-or-later",
+  "license_confirmation_date": "2026-11-16",
+  "display_name": "Pitch Shift Suite",
+  "updated_date": "2026-11-16",
+  "media_scope": "Four CC0 piano/guitar recorded-note demonstration arrangements; no papers or restricted reference captures",
+  "publication_repository": "https://github.com/fmiramar/Pitch-Shift-Suite"
+}

@@ -1,0 +1,68 @@
+{
+  "repository": "https://github.com/schult/terrarium-poly-octave",
+  "commit": "bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1",
+  "license": "MIT; copyright 2024 Steven Schulteis",
+  "upstream_files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/LICENSE",
+      "sha256": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/README.md",
+      "sha256": "3d98f37189f2e11222ded7e96151390829db793d790c594d6bde44d0c3d9e4da"
+    },
+    {
+      "path": "main.cpp",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/main.cpp",
+      "sha256": "6184e62cfb95da4dede3faabb46172ddfef47900345b3bb69a0d30c2fbb029ae"
+    },
+    {
+      "path": "util/OctaveGenerator.h",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/util/OctaveGenerator.h",
+      "sha256": "0a80209d1e155dbdbc1d8801ccd8e912b2dcac83ef6dd5b25a98c88b7414ea1c"
+    },
+    {
+      "path": "util/BandShifter.h",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/util/BandShifter.h",
+      "sha256": "41b7d4aaace0d3a337f61b8fd0dc887596039fe4d224d052fd2193d84b886023"
+    },
+    {
+      "path": "util/Multirate.h",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/util/Multirate.h",
+      "sha256": "25af1135a79d164fac5069a08d56a8de832c5264d88024514b07a9aaba937784"
+    },
+    {
+      "path": "util/FastSqrt.h",
+      "url": "https://raw.githubusercontent.com/schult/terrarium-poly-octave/bc7ddf35362cf4b0e9d46b77bc21e490f79f9ed1/util/FastSqrt.h",
+      "sha256": "6f4596bc75a40de068853689f555ae7c4a140cc313b6e1ca6ebde016e22fd520"
+    }
+  ],
+  "adaptations": [
+    "Fixed arrays and worker-time initialization replace callback-local statics/vector allocation",
+    "Original FIR coefficients and history offsets retained; independent fixed newest-first history replaces q ring buffer",
+    "C++17 memcpy replaces bit_cast; inverse-square-root tiny-input guard and nonnegative square-root radicands",
+    "Explicit state reset and 1e-15 float-state tail cutoff",
+    "std::pow replaces gcem in center preparation; no claim of bit identity to embedded firmware",
+    "One selected voice; fixed 48 kHz; six-sample host adapter; no firmware EQ/dry mix",
+    "Nonfinite input becomes zero; input limited to +/-1e6 with sub-1e-15 input floor"
+  ],
+  "excluded_dependencies": [
+    "q (history semantics inspected only)",
+    "gcem",
+    "libDaisy",
+    "firmware controls/EQ/dry mix"
+  ],
+  "q_history_inspected": {
+    "url": "https://raw.githubusercontent.com/schult/q/f14d5ff77185d97f37ac77ac50c74fb2bc146231/q_lib/include/q/utility/ring_buffer.hpp",
+    "sha256": "88de311076eaff94b5ff2b8f484897d3f7daa5a824033827b354f445a7df3cf9",
+    "semantics": "index 0 newest; source FIR offsets preserved; no q code imported"
+  },
+  "adapted_sha256": {
+    "third_party/terrarium/FastSqrt.hpp": "6668b7712d60ec3951570a2c31e9f8c761464fe5c2cd3d011c6b39273c02d97e",
+    "third_party/terrarium/LICENSE": "58b92f44b5327530dc673407ffb18ff59737ad9f895bf7af51aeb04d17ba2a79",
+    "third_party/terrarium/BandShifter.hpp": "d88b8eba08f5fac515383673c571ac1957c8ee30d96d42113495b556a96c24e0",
+    "third_party/terrarium/Multirate.hpp": "49da95123cdfd636b3798094da2a31095b8d4f2d21db11f74ffcf9ee0b82daee"
+  }
+}

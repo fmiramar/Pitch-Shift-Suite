@@ -1,0 +1,434 @@
+{
+  "date": "2026-11-08",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "native_tests_passed": 14,
+  "native_tests_seconds": 42.42,
+  "help_documents": 15,
+  "help_renders_passed": 45,
+  "installed_modules": 13,
+  "all_original_files_preserved": 323,
+  "logs_sha256": {
+    "configure.log": "ce55833a322868cc5a4fd7a6f945aaf247507c3ccef6d9fffc99ab4362a7f1cf",
+    "build.log": "a4aeb804d5b18ae7fedcf0ce5471e0802c004c9c030564f5f397a25af8997998",
+    "ctest.log": "a3d67216430b3d6d86fd1ba6e80c7dce7118c96a34c028dec4ca6e5497268215",
+    "install.log": "df2577995ac9e104b5ced2901d933374aa1c693345a42a1bb4055eb20856be7a",
+    "help.log": "a7eb70df20c42dc802e7e74d355fbcbd64306ce1448feb11007bcc3d661f19c3"
+  },
+  "help_results": [
+    {
+      "example": "ERBPhaseOctave0",
+      "peak": 0.01468215137720108,
+      "rms": 0.00492075282723014,
+      "help_sha256": "a163299e6b2a3f00ec0d67114a3ddb42acd7eacf27c9abd5c4df396371cd2f3a",
+      "wav_sha256": "c386c8e7cc29de1d434199bc9268b3f2a6b2236ba9db53448bcd4164fdb94e2d"
+    },
+    {
+      "example": "ERBPhaseOctave1",
+      "peak": 0.01599353365600109,
+      "rms": 0.005628366929853881,
+      "help_sha256": "a163299e6b2a3f00ec0d67114a3ddb42acd7eacf27c9abd5c4df396371cd2f3a",
+      "wav_sha256": "dcf93c83e74f6bff3e1d68367bcae9698389c3c1498978f70b89564aac5fa349"
+    },
+    {
+      "example": "ERBPhaseOctave2",
+      "peak": 0.003663285868242383,
+      "rms": 0.0004361968531674721,
+      "help_sha256": "a163299e6b2a3f00ec0d67114a3ddb42acd7eacf27c9abd5c4df396371cd2f3a",
+      "wav_sha256": "7204471cb718a9e5ecda3998412e56ee8ad9ce9cb89c38fbd5e22a794c3f8ca8"
+    },
+    {
+      "example": "ERBSSBOctave0",
+      "peak": 0.025632087141275406,
+      "rms": 0.011693037405855542,
+      "help_sha256": "b0892dbef0dc5083d63486038f81e15364ea17a231adb45f0c227ba7a228ae78",
+      "wav_sha256": "51be06cc11311cc5799bc31ce130652237abe2299a8bf0c355321b9fb3164c25"
+    },
+    {
+      "example": "ERBSSBOctave1",
+      "peak": 0.028176123276352882,
+      "rms": 0.008492390457791954,
+      "help_sha256": "b0892dbef0dc5083d63486038f81e15364ea17a231adb45f0c227ba7a228ae78",
+      "wav_sha256": "b3bfb4fccd9cb9a6ee0af582f1782ab232c244c66402eed422ed1818402ebf75"
+    },
+    {
+      "example": "ERBSSBOctave2",
+      "peak": 0.0036263354122638702,
+      "rms": 0.0004095607446559203,
+      "help_sha256": "b0892dbef0dc5083d63486038f81e15364ea17a231adb45f0c227ba7a228ae78",
+      "wav_sha256": "871a4d6beec59d47171e5544016d7e210bb805d72b35b3f6f5f2740dd107b000"
+    },
+    {
+      "example": "LowLatencySpectralShift0",
+      "peak": 0.05007250979542732,
+      "rms": 0.03190381789244299,
+      "help_sha256": "ca65e994739241393bf7ee779ba22c94bdb588ffdd2e3be29bfbde5f89548a06",
+      "wav_sha256": "67cd0d7d7bdd6b6080661a62621a9356a30317611982e9ae001ee315fa0aed87"
+    },
+    {
+      "example": "LowLatencySpectralShift1",
+      "peak": 0.059950172901153564,
+      "rms": 0.02269585064025144,
+      "help_sha256": "ca65e994739241393bf7ee779ba22c94bdb588ffdd2e3be29bfbde5f89548a06",
+      "wav_sha256": "aad5347205780b0bfad1fc4cd860e3287111fe5c8cd45614290eb11b55af1f78"
+    },
+    {
+      "example": "LowLatencySpectralShift2",
+      "peak": 0.019211716949939728,
+      "rms": 0.0012309890936193473,
+      "help_sha256": "ca65e994739241393bf7ee779ba22c94bdb588ffdd2e3be29bfbde5f89548a06",
+      "wav_sha256": "ce7e3cdf5ea88d7af5a8ee2fab1ae172af816ce7bb764a09f765ccc6e0b89f17"
+    },
+    {
+      "example": "MultirateOctaveShift0",
+      "peak": 0.033315520733594894,
+      "rms": 0.022520588646017876,
+      "help_sha256": "db724517c59bd354f6882a535aa6c871964622c12426cfdb857f19fa39119873",
+      "wav_sha256": "1f4d687238b96f0f9947baa58a1db47617346bb456faf7a8bcb5c32aea736799"
+    },
+    {
+      "example": "MultirateOctaveShift1",
+      "peak": 0.03865627571940422,
+      "rms": 0.014556938141239706,
+      "help_sha256": "db724517c59bd354f6882a535aa6c871964622c12426cfdb857f19fa39119873",
+      "wav_sha256": "e166e1911710d0bd9d3ee3fdd57d85795e998697a458ef8036c8e3679e7f1052"
+    },
+    {
+      "example": "MultirateOctaveShift2",
+      "peak": 0.0036556096747517586,
+      "rms": 0.00031970188793931613,
+      "help_sha256": "db724517c59bd354f6882a535aa6c871964622c12426cfdb857f19fa39119873",
+      "wav_sha256": "11e73b68cfcaccedef02e4d2f269a15502e9121711340b81409bf720230197f3"
+    },
+    {
+      "example": "OCEANOctave0",
+      "peak": 0.04999947547912598,
+      "rms": 0.02488187682680167,
+      "help_sha256": "a2c109b719954965845958c5ce4efaea34c996c6cc63297b5577b5e48e46b403",
+      "wav_sha256": "0f22b21273b72334a808d6f41cf657b03a0a05a57d41481ae94e81097009080f"
+    },
+    {
+      "example": "OCEANOctave1",
+      "peak": 0.05915199965238571,
+      "rms": 0.01719285370914544,
+      "help_sha256": "a2c109b719954965845958c5ce4efaea34c996c6cc63297b5577b5e48e46b403",
+      "wav_sha256": "5c24b59c0a708345e519bbe789729f2b96d9bb4feb2accd6661f7619ffc73608"
+    },
+    {
+      "example": "OCEANOctave2",
+      "peak": 0.012272878549993038,
+      "rms": 0.0007507903984129895,
+      "help_sha256": "a2c109b719954965845958c5ce4efaea34c996c6cc63297b5577b5e48e46b403",
+      "wav_sha256": "433784108b935633b70fe55cd06082e6b797965af9fb08784eb6d9f6c72c7daf"
+    },
+    {
+      "example": "OLAStretchShift0",
+      "peak": 0.04521584138274193,
+      "rms": 0.03185577390582761,
+      "help_sha256": "ce99b51e351afa4acb59b6258d42ac3d41957fc37aa26c70778b47966e28fed4",
+      "wav_sha256": "9feb3de65d67f5a7cc448ec56296eaad44fccc8231a109545e9f4ab7a9eafb02"
+    },
+    {
+      "example": "OLAStretchShift1",
+      "peak": 0.026135683059692383,
+      "rms": 0.013292472407877147,
+      "help_sha256": "ce99b51e351afa4acb59b6258d42ac3d41957fc37aa26c70778b47966e28fed4",
+      "wav_sha256": "f1cec504f8399f62558c339b0ad77aa29692e893f99f43437b52414e995c2181"
+    },
+    {
+      "example": "OLAStretchShift2",
+      "peak": 0.00898793339729309,
+      "rms": 0.0008963976571804558,
+      "help_sha256": "ce99b51e351afa4acb59b6258d42ac3d41957fc37aa26c70778b47966e28fed4",
+      "wav_sha256": "6fa1c6beaa32d6b691d97bd46d614d33d8231b134a469b836e8ab4b0ff9dc861"
+    },
+    {
+      "example": "PVIntegerOctave0",
+      "peak": 0.050000205636024475,
+      "rms": 0.035304909183207916,
+      "help_sha256": "de90d006aa4f345067acb8801145348c5a69a846c836390b19a0a2788bbb3ab7",
+      "wav_sha256": "d231542394dddd5ad8b71212da9d9a8932c1598123a5f0e4285f1a9699eb217d"
+    },
+    {
+      "example": "PVIntegerOctave1",
+      "peak": 0.06877104192972183,
+      "rms": 0.02291882440482118,
+      "help_sha256": "de90d006aa4f345067acb8801145348c5a69a846c836390b19a0a2788bbb3ab7",
+      "wav_sha256": "42996d814cae364f76575d3303189dbcf0a9f9124496b89bf5bfbc07edf1df4b"
+    },
+    {
+      "example": "PVIntegerOctave2",
+      "peak": 0.015171868726611137,
+      "rms": 0.0008690689578178431,
+      "help_sha256": "de90d006aa4f345067acb8801145348c5a69a846c836390b19a0a2788bbb3ab7",
+      "wav_sha256": "7bafa1e7414552a670a562e59e8fd4ab0f46043713af8df7c04563563bad390a"
+    },
+    {
+      "example": "PhaseLockedShift0",
+      "peak": 0.05000715330243111,
+      "rms": 0.03535522367863811,
+      "help_sha256": "e2ab9d2fd3e0377eaa2c2bcb46a2ce9bca057e6ca37a16a526907c427e2698c6",
+      "wav_sha256": "9461256dfffb27bb39ee653675d214e41536ddd6423c857249abcbd5d3d7fa42"
+    },
+    {
+      "example": "PhaseLockedShift1",
+      "peak": 0.06299646198749542,
+      "rms": 0.023270201731672675,
+      "help_sha256": "e2ab9d2fd3e0377eaa2c2bcb46a2ce9bca057e6ca37a16a526907c427e2698c6",
+      "wav_sha256": "5bd41c73cdc213d78d240379ecea6cc7bc18c1238e8d3e2e884d73eecd6af5ff"
+    },
+    {
+      "example": "PhaseLockedShift2",
+      "peak": 0.011835062876343727,
+      "rms": 0.0009123017463176867,
+      "help_sha256": "e2ab9d2fd3e0377eaa2c2bcb46a2ce9bca057e6ca37a16a526907c427e2698c6",
+      "wav_sha256": "dc9a835f828da89dfda5d06957290242c8562b355f523dd82a3bd3d44f8db158"
+    },
+    {
+      "example": "RubberBandLiveShift0",
+      "peak": 0.050136763602495193,
+      "rms": 0.03543984503694331,
+      "help_sha256": "a95f2a8818325b146b244bfe12aa0920d14245f76279c5d2e63088ca7f797986",
+      "wav_sha256": "b8156d9aef6bd9509d42ae86f597c1cfb5df447468376aae846990e3df830134"
+    },
+    {
+      "example": "RubberBandLiveShift1",
+      "peak": 0.060203276574611664,
+      "rms": 0.02452213109494767,
+      "help_sha256": "a95f2a8818325b146b244bfe12aa0920d14245f76279c5d2e63088ca7f797986",
+      "wav_sha256": "3914452890121c3dc579353bd9e521c5b46b691d6e854012f60126fc6472e810"
+    },
+    {
+      "example": "RubberBandLiveShift2",
+      "peak": 0.016034558415412903,
+      "rms": 0.0010755136630812149,
+      "help_sha256": "a95f2a8818325b146b244bfe12aa0920d14245f76279c5d2e63088ca7f797986",
+      "wav_sha256": "2d773846012e4d8cdfa17f24479480820d13af138e5b630899a55345d413e5a4"
+    },
+    {
+      "example": "RubberBandR2Shift0",
+      "peak": 0.05497267097234726,
+      "rms": 0.03518417394051646,
+      "help_sha256": "c3b72d0b9850465dbdd3152876bea3c884b1c4262e98a81f8a1103e2217d78e0",
+      "wav_sha256": "b14153a57419e372dc2f48192cde6858134dfac6d495b1c06ab939256c8b0589"
+    },
+    {
+      "example": "RubberBandR2Shift1",
+      "peak": 0.05431365594267845,
+      "rms": 0.021022481060098026,
+      "help_sha256": "c3b72d0b9850465dbdd3152876bea3c884b1c4262e98a81f8a1103e2217d78e0",
+      "wav_sha256": "4a0fcd324e4e85375c97e06461f64dff87343b2109ee64ce2ce855486e4e6cd5"
+    },
+    {
+      "example": "RubberBandR2Shift2",
+      "peak": 0.010660801082849503,
+      "rms": 0.0009753166668906076,
+      "help_sha256": "c3b72d0b9850465dbdd3152876bea3c884b1c4262e98a81f8a1103e2217d78e0",
+      "wav_sha256": "c3a4e2d9e29ea9bcf07064fb5297d16109004b6b3277070f4c34a0c9659360fd"
+    },
+    {
+      "example": "RubberBandR3Shift0",
+      "peak": 0.049845319241285324,
+      "rms": 0.03521271240678454,
+      "help_sha256": "6091f677c7bc91d79060abc9c96a0394c25a0f024c2752fd061688b4e7b237f0",
+      "wav_sha256": "4fd708078ebd4dcd42e7dbdd237fb4166bc9c24af8bb257caa47a7ff012537ae"
+    },
+    {
+      "example": "RubberBandR3Shift1",
+      "peak": 0.061245162039995193,
+      "rms": 0.02445114142010311,
+      "help_sha256": "6091f677c7bc91d79060abc9c96a0394c25a0f024c2752fd061688b4e7b237f0",
+      "wav_sha256": "95bc921bdfac2c701ff2f6b4f254b4e07ec9c32eec4902cb258196049f4712cb"
+    },
+    {
+      "example": "RubberBandR3Shift2",
+      "peak": 0.013362222351133823,
+      "rms": 0.0010571141424433378,
+      "help_sha256": "6091f677c7bc91d79060abc9c96a0394c25a0f024c2752fd061688b4e7b237f0",
+      "wav_sha256": "28c78ac083d169308a4982a472b884f434418c69f486deca0a4779612457a48e"
+    },
+    {
+      "example": "SinusoidalResidualShift0",
+      "peak": 0.050002362579107285,
+      "rms": 0.03535574059379363,
+      "help_sha256": "3e50ce2815e15369a778354ee786c0b5ce64d9af3b7fab804d878604db435b0f",
+      "wav_sha256": "d8ba1f3c552faa65113de1e9f78732f3d867a9a3a9fd3d8e0bb2a9616a63d54a"
+    },
+    {
+      "example": "SinusoidalResidualShift1",
+      "peak": 0.08283806592226028,
+      "rms": 0.022056331771028642,
+      "help_sha256": "3e50ce2815e15369a778354ee786c0b5ce64d9af3b7fab804d878604db435b0f",
+      "wav_sha256": "86670c0363e1f63a02b6e77eaa211a3eeb638032a57cfea5846faa81d86c1fd4"
+    },
+    {
+      "example": "SinusoidalResidualShift2",
+      "peak": 0.01790698990225792,
+      "rms": 0.0011605428745900578,
+      "help_sha256": "3e50ce2815e15369a778354ee786c0b5ce64d9af3b7fab804d878604db435b0f",
+      "wav_sha256": "5797c7de67c62685f154165010dd8945a119751125421cea9407175e030ee08d"
+    },
+    {
+      "example": "SpectralHybridShift0",
+      "peak": 0.05184264853596687,
+      "rms": 0.0353073196570136,
+      "help_sha256": "8a938e55b293ac93ee1bd7cecc71f716c72696b100f8aee420a95abaf28ea1cc",
+      "wav_sha256": "8c3d9c76818921369593d1dc88e0a309ecdc6ea6598181e8ef84f3d9f2d1c667"
+    },
+    {
+      "example": "SpectralHybridShift1",
+      "peak": 0.05915755033493042,
+      "rms": 0.024015748512730497,
+      "help_sha256": "8a938e55b293ac93ee1bd7cecc71f716c72696b100f8aee420a95abaf28ea1cc",
+      "wav_sha256": "fcc3ce8ab01f52383b59e28c906c9c58954c0e9e31b0a897cbf4f8bb09611cfd"
+    },
+    {
+      "example": "SpectralHybridShift2",
+      "peak": 0.020271005108952522,
+      "rms": 0.0010517984990817213,
+      "help_sha256": "8a938e55b293ac93ee1bd7cecc71f716c72696b100f8aee420a95abaf28ea1cc",
+      "wav_sha256": "b9a16654b5e7640fb9c1f460c49339972dbb1f92b55328ca44cf73ed8b31df5d"
+    },
+    {
+      "example": "SubbandPhaseHalf0",
+      "peak": 0.015452628955245018,
+      "rms": 0.008799034576109512,
+      "help_sha256": "5a970bc326e9619542d2c7b6d6d48d8c34577f4a20eee8a7c625c4fa8b8567d0",
+      "wav_sha256": "6c764b2a1664cacbd9b19b2b6e10cf2b457c72b2f7906faa4601fb1e758538bb"
+    },
+    {
+      "example": "SubbandPhaseHalf1",
+      "peak": 0.017207736149430275,
+      "rms": 0.006911964247332042,
+      "help_sha256": "5a970bc326e9619542d2c7b6d6d48d8c34577f4a20eee8a7c625c4fa8b8567d0",
+      "wav_sha256": "409aa33ef230ff79319660c2d16a97edacaf67a18e9d7f7dacfe4db87d56d2b2"
+    },
+    {
+      "example": "SubbandPhaseHalf2",
+      "peak": 0.0034836316481232643,
+      "rms": 0.0004240256017063691,
+      "help_sha256": "5a970bc326e9619542d2c7b6d6d48d8c34577f4a20eee8a7c625c4fa8b8567d0",
+      "wav_sha256": "6dfdd850aba7fa9e0b1944de41dd5d4b001fb177897663ba6198b6f65fae3966"
+    },
+    {
+      "example": "WSOLAStretchShift0",
+      "peak": 0.04999951645731926,
+      "rms": 0.0353547536955809,
+      "help_sha256": "cfb5984b9b81046e1c6714df379482be1ba718ae6839ac2e109037ab82ab3919",
+      "wav_sha256": "33193f89243d84bbdc7d63c97a7e670eb55e36161b83de4a2f7c8ce816115813"
+    },
+    {
+      "example": "WSOLAStretchShift1",
+      "peak": 0.05378466099500656,
+      "rms": 0.01920432506959582,
+      "help_sha256": "cfb5984b9b81046e1c6714df379482be1ba718ae6839ac2e109037ab82ab3919",
+      "wav_sha256": "24de77560cdc64c450410fd5655f17c30e8842122f2b8f63b156aec4fcb6f605"
+    },
+    {
+      "example": "WSOLAStretchShift2",
+      "peak": 0.012130322866141796,
+      "rms": 0.0010785225194089535,
+      "help_sha256": "cfb5984b9b81046e1c6714df379482be1ba718ae6839ac2e109037ab82ab3919",
+      "wav_sha256": "ba38cbde07eda98085efe304eedc65deda566b6db988e632a5a48d8eb3c0811d"
+    }
+  ],
+  "copied_license_sources": {
+    "LICENSE": {
+      "source": "SuperCollider 3.14.1 COPYING (verbatim GPLv3)",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "licenses/GPL-2.0.txt": {
+      "source": "Rubber Band e4296ac8 COPYING (verbatim GPLv2)",
+      "sha256": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5"
+    }
+  },
+  "suite_update": {
+    "date": "2026-11-16",
+    "guide_code_blocks_compiled": 9,
+    "guide_parsed": true,
+    "render_results": [
+      {
+        "case": "guitar-monophonic-spectral-1",
+        "peak": 0.12961138784885406,
+        "rms": 0.00890722905320707
+      },
+      {
+        "case": "guitar-monophonic-locked-1",
+        "peak": 0.10529748350381851,
+        "rms": 0.00903933639895358
+      },
+      {
+        "case": "guitar-monophonic-erb-1",
+        "peak": 0.05381659418344498,
+        "rms": 0.007276943045751922
+      },
+      {
+        "case": "guitar-monophonic-spectral-0",
+        "peak": 0.12369551509618759,
+        "rms": 0.009059464516392519
+      },
+      {
+        "case": "guitar-polyphonic-spectral-1",
+        "peak": 0.11381823569536209,
+        "rms": 0.01018103247946081
+      },
+      {
+        "case": "guitar-polyphonic-locked-1",
+        "peak": 0.10624106228351593,
+        "rms": 0.010536329954186142
+      },
+      {
+        "case": "guitar-polyphonic-erb-1",
+        "peak": 0.08076443523168564,
+        "rms": 0.008639418527387557
+      },
+      {
+        "case": "guitar-polyphonic-spectral-0",
+        "peak": 0.12478133291006088,
+        "rms": 0.01107330173368761
+      },
+      {
+        "case": "piano-monophonic-spectral-1",
+        "peak": 0.12509261071681976,
+        "rms": 0.011142943257332677
+      },
+      {
+        "case": "piano-monophonic-locked-1",
+        "peak": 0.1142963096499443,
+        "rms": 0.011361846039427628
+      },
+      {
+        "case": "piano-monophonic-erb-1",
+        "peak": 0.08157562464475632,
+        "rms": 0.009169607010408035
+      },
+      {
+        "case": "piano-monophonic-spectral-0",
+        "peak": 0.1216350719332695,
+        "rms": 0.011396572279380058
+      },
+      {
+        "case": "piano-polyphonic-spectral-1",
+        "peak": 0.14288005232810974,
+        "rms": 0.01066476658857287
+      },
+      {
+        "case": "piano-polyphonic-locked-1",
+        "peak": 0.12987887859344482,
+        "rms": 0.010753217373387204
+      },
+      {
+        "case": "piano-polyphonic-erb-1",
+        "peak": 0.10141146928071976,
+        "rms": 0.008667667147121702
+      },
+      {
+        "case": "piano-polyphonic-spectral-0",
+        "peak": 0.12481234967708588,
+        "rms": 0.011001440818071691
+      }
+    ],
+    "documentation_component_install_verified": true,
+    "dsp_changes": false,
+    "native_tests_rerun": false
+  }
+}

@@ -1,0 +1,3 @@
+# CC0 piano and guitar demonstration audio
+
+Four seven-second mono clips assembled from CC0 recorded notes: piano/guitar, each monophonic and polyphonic. These are sampled sequences/chords, not continuous human performances. No reverb or other effect was added. Guitar uses direct pickup recordings. Acoustic piano retains possible natural room sound; not verified anechoic. Piano: VCSL Knight upright (Versilian Studios collection); guitar: Shinyguitar, D. Smolken / Karoryfer. Original license texts and exact source URLs, revisions, hashes and processing recipes are in this directory. Audio remains CC0-1.0 independently of the GPL software.

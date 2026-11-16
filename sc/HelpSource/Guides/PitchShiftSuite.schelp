@@ -1,0 +1,210 @@
+TITLE:: Pitch Shift Suite
+summary:: Collection of polyphonic and monophonic pitch-shifting UGens for SuperCollider
+categories:: Guides, UGens>Pitch
+related:: Classes/SpectralHybridShift, Classes/PhaseLockedShift, Classes/WSOLAStretchShift, Classes/ERBPhaseOctave, Classes/PitchShift
+
+DESCRIPTION::
+Pitch Shift Suite is a collection of 15 independent SuperCollider pitch-shifting UGens covering a wide range of DSP techniques. Different algorithms exhibit distinct trade-offs between latency, CPU usage, polyphonic clarity, transient preservation, and harmonic coloration.
+
+SECTION:: Overview of Engines
+
+The suite includes several distinct DSP families:
+
+list::
+## STRONG::Spectral Hybrid & Phase Vocoders:: (arbitrary ratios 0.5 to 2.0)
+list::
+## link::Classes/SpectralHybridShift::: Uses the Signalsmith hybrid time-frequency algorithm. Excellent transient response and polyphonic fidelity.
+## link::Classes/PhaseLockedShift::: Traditional STFT phase vocoder with Laroche & Dolson phase locking across spectral peaks. Preserves harmonic alignment in rich chords.
+## link::Classes/LowLatencySpectralShift::: Short-window spectral processor optimized for reduced latency in real-time live performance.
+::
+
+## STRONG::Time-Domain Granular Shifters:: (arbitrary ratios 0.5 to 2.0)
+list::
+## link::Classes/WSOLAStretchShift::: Waveform-Similarity Overlap-Add. Maximizes cross-correlation between grains to prevent phase cancellation. Very low latency with clean pitch tracking.
+## link::Classes/OLAStretchShift::: Classic Overlap-Add granular pitch shifting. Minimal CPU overhead and ultra-low latency; best suited for speech or percussive audio.
+::
+
+## STRONG::Auditory ERB Filterbanks:: (fixed 1 octave up)
+list::
+## link::Classes/ERBPhaseOctave::: Decomposes audio into 43 Equivalent Rectangular Bandwidth (ERB) Gammatone-like bands and doubles the instantaneous analytic phase. Delivers analog-style polyphonic octave doubling.
+## link::Classes/ERBSSBOctave::: 43-band ERB filterbank with single-sideband frequency shifting per band.
+::
+
+## STRONG::Specialized Octave Engines::
+list::
+## link::Classes/PVIntegerOctave::: Phase vocoder optimized for exact integer frequency transposition (+1 octave).
+## link::Classes/OCEANOctave::: Sinusoidal-matching octave doubler based on Juillerat's OCEAN model (+1 octave).
+## link::Classes/SubbandPhaseHalf::: Experimental subband phase-halving engine for octave-down generation (-1 octave). Gritty, aggressive character on monophonic sources.
+## link::Classes/MultirateOctaveShift::: Cascaded multirate decimation/interpolation filterbank (+1 octave up or -1 octave down).
+::
+
+## STRONG::Sinusoidal & Residual Modeling::
+list::
+## link::Classes/SinusoidalResidualShift::: Decomposes sound into deterministic sinusoidal partials (which are pitch-shifted) and stochastic residual noise (which remains natural). Ideal for monophonic acoustic instruments and voice.
+::
+
+## STRONG::Rubber Band Library Wrappers:: (optional module)
+list::
+## link::Classes/RubberBandR2Shift::: High-fidelity phase-vocoder engine with transient preservation.
+## link::Classes/RubberBandR3Shift::: Modern high-definition Rubber Band engine with enhanced phase coherence.
+## link::Classes/RubberBandLiveShift::: Rubber Band live mode with low algorithmic latency.
+::
+::
+
+SECTION:: Bundled Audio Recordings
+
+The suite installs four CC0-licensed mono 48 kHz recordings in code::Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite"::
+list::
+## code::guitar-monophonic.wav::: Single-note melodic line on electric guitar (dry magnetic pickup).
+## code::guitar-polyphonic.wav::: Multi-note guitar chords.
+## code::piano-monophonic.wav::: Single-note melodic line on upright acoustic piano.
+## code::piano-polyphonic.wav::: Polyphonic piano chords.
+::
+
+EXAMPLES::
+
+The following examples use plain code::Buffer.read:: and code::PlayBuf::. Each code block plays the original (dry) recording first, followed immediately by the pitch-shifted (wet) version, and then frees the buffer automatically.
+
+SUBSECTION:: Spectral Hybrid Shift (Guitar, Monophonic)
+Pitch shift a monophonic guitar line up by a fifth (ratio 1.5, +7 semitones):
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Pitch-shifted (ratio 1.5)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        SpectralHybridShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::
+
+SUBSECTION:: Phase-Locked Vocoder (Piano, Polyphonic Chords)
+Pitch shift polyphonic piano chords up by a major third (ratio 1.25, +4 semitones) using peak phase locking:
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Pitch-shifted (ratio 1.25)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        PhaseLockedShift.ar(sig, 1.25) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::
+
+SUBSECTION:: Time-Domain WSOLA (Guitar, Polyphonic Chords)
+Pitch shift guitar chords using waveform-similarity overlap-add (low latency, time-domain):
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-polyphonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Pitch-shifted (ratio 1.5)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        WSOLAStretchShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::
+
+SUBSECTION:: Auditory ERB Phase Doubling (Guitar, Polyphonic Chords)
+Octave-up doubling (+1 octave / ratio 2.0) across 43 psychoacoustic ERB subbands:
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-polyphonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Octave doubled (+1 octave)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        ERBPhaseOctave.ar(sig) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::
+
+SUBSECTION:: Subband Phase Halving (Guitar, Monophonic)
+Octave-down generation (-1 octave / ratio 0.5) via instantaneous phase halving:
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Octave down (-1 octave)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        SubbandPhaseHalf.ar(sig) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::
+
+SUBSECTION:: Multirate Filterbank (Piano, Polyphonic Chords)
+Sub-octave generation (-1 octave, voice: 1) using cascaded decimation/interpolation filtering:
+code::
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav");
+    s.sync;
+
+    // 1. Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // 2. Sub-octave voice (-1 octave)
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        MultirateOctaveShift.ar(sig, voice: 1) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::

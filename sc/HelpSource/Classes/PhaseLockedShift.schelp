@@ -1,0 +1,136 @@
+CLASS:: PhaseLockedShift
+summary:: Phase-locked STFT phase vocoder pitch shifter
+categories:: UGens>Pitch
+related:: Guides/PitchShiftSuite, Classes/PitchShift, Classes/SpectralHybridShift, Classes/WSOLAStretchShift
+
+DESCRIPTION::
+PhaseLockedShift is an STFT phase vocoder pitch shifter implementing the Laroche & Dolson identity phase-locking technique. Standard phase vocoders treat frequency bins independently, which disperses phase relationships across harmonics and creates a hollow or reverberant 'phasiness'. PhaseLockedShift detects prominent spectral peaks and locks the phases of surrounding bins within each peak's region of influence to the dominant component, preserving the vertical harmonic alignment of rich acoustic instruments and polyphonic chords.
+
+Processing is monophonic. Multichannel expansion is supported via Arrays. Algorithmic latency depends on the chosen FFT size (e.g. 2048 samples).
+
+CLASSMETHODS::
+
+METHOD:: ar
+
+ARGUMENT:: in
+Audio-rate mono input signal.
+
+ARGUMENT:: ratio
+Pitch ratio multiplier (0.5 to 2.0). Default is 1.0.
+
+ARGUMENT:: fftSize
+FFT window size in frames (scalar, default 2048). Larger sizes improve low-frequency resolution at the expense of latency.
+
+ARGUMENT:: mode
+Phase locking mode (scalar: 0 = loose, 1 = strict identity phase locking). Default is 1.
+
+returns:: An audio-rate pitch-shifted signal.
+
+EXAMPLES::
+
+SUBSECTION:: Synthetic Signals
+
+code::
+// 1. Monophonic Sine: plays original (220 Hz) then pitch-shifted (ratio 1.5, +7 semitones)
+(
+fork {
+    // Original
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        var shifted = PhaseLockedShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 2. Polyphonic Chord: plays original chord then pitch-shifted
+(
+fork {
+    // Original chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        var shifted = PhaseLockedShift.ar(sig, 1.25);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 3. Percussive / Transient: plays original bursts then pitch-shifted
+(
+fork {
+    // Original bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        var shifted = PhaseLockedShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+::
+
+SUBSECTION:: Recorded Audio
+
+code::
+// 4. Monophonic Recorded Sound (Guitar): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        PhaseLockedShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+
+// 5. Polyphonic Recorded Sound (Piano Chords): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        PhaseLockedShift.ar(sig, 1.25) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::

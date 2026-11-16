@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "algorithm": "A16 LowLatencySpectralShift",
+  "upstream_url": "https://pitchtech.ch/Confs/ICALIP2010/PitchShiftOcean.7z",
+  "archive_sha256": "1e9ac54983d2f114b765bb465ab0736f2fe1a13cb698ef1d2f393cbb31ffbb83",
+  "upstream_files": {
+    "src/ch/tachyon/sonics/ocean/PitchShiftOcean.java": "617d464110bce510e3bd0f9e23c4fe1e418956a6aad0a703b6d16ff113ad87da",
+    "src/ch/tachyon/sonics/ocean/fft/BooFFT.java": "4e4f08417d5c0312d8cbea08304505722848c01f93f36c2f9c8bde5be2585a4b",
+    "src/ch/tachyon/sonics/ocean/fft/Windows.java": "c35ed8ee92dbfab3cbee0def4f81d90d9954ebfa96eddd092b6c893e49eb154f",
+    "src/ch/tachyon/sonics/ocean/fft/UnityRoots.java": "ddcf65c90f7233bc1b43ba93362c77579c7a8d171efea67855883bda0e50e862",
+    "src/LICENSE.txt": "ffd77f497e3d66c8fa460dba3349c8653b01d2a3097261f1aefc2f87e4f5daac",
+    "README.txt": "bf1c6afd5298ecdb405a781ba5c1483899cf6e135df97e0c6f85320f00e6f4e2"
+  },
+  "license": "MIT, Copyright (c) 2018 Nicolas Juillerat",
+  "erratum_url": "https://pitchtech.ch/Confs/ICALIP2010/Errata.txt",
+  "erratum_sha256": "e3c6ddd9911b5c61dfd3a375a28864c8f7a443e4646d78177b52ae0da8e92265",
+  "adapted_files": [
+    "src/dsp/LowLatencySpectralShift.hpp",
+    "tests/low_latency_reference.py"
+  ],
+  "retained_notice": "third_party/juillerat-ocean/LICENSE.txt",
+  "changes": [
+    "Fixed N512, synthesis2048, overlap8; mono44.1/48kHz; scalar ratio0.5-2",
+    "Double precision rather than Java float; Signalsmith portable full-complex FFT replaces BooFFT",
+    "Positive phase rotation for negative-exponent forward FFT; overall inverse scale1/N",
+    "All storage, bin maps, roots and demodulation prepared before processing; no callback allocation/logging",
+    "Arbitrary host blocks through one-hop FIFO; unity delay512 instead of source reporting override0",
+    "Nonfinite input sanitized, explicit invalid configuration and output checks, bounded phase counter"
+  ],
+  "excluded": [
+    "Bundled Tachyon-Tunnel/Tritonus JARs and all other binary dependencies",
+    "Java framework, GUI, other presets and live ratio changes"
+  ],
+  "java_runtime_executed": false
+}

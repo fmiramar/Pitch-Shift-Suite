@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-16",
+  "license": "CC0-1.0",
+  "description": "Original note recordings assembled into monophonic sequences and polyphonic chords; not recordings of continuous performances. No pitch transposition, EQ, compression or reverb added. Piano can contain natural room sound.",
+  "sources": [
+    {
+      "instrument": "piano",
+      "repository": "https://github.com/sgossner/VCSL",
+      "revision": "c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "license_url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE",
+      "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "recordings": [
+        {
+          "note": "A2",
+          "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Upright%20Piano%2C%20Knight/Sustains/Player_vl1_rr1_A2.wav",
+          "sha256": "fb39ae501f7dde4aa3626d2e382b3709962cbe5d48b6c001ba7c911d1ffb6aeb",
+          "sample_rate": 44100,
+          "channels": 2,
+          "frames": 957911
+        },
+        {
+          "note": "C#3",
+          "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Upright%20Piano%2C%20Knight/Sustains/Player_vl1_rr1_C%233.wav",
+          "sha256": "dc314226819e7af0768cd7fc08933f5e5b550083145e05af630fd7556f4d3913",
+          "sample_rate": 44100,
+          "channels": 2,
+          "frames": 724352
+        },
+        {
+          "note": "F3",
+          "url": "https://raw.githubusercontent.com/sgossner/VCSL/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/Chordophones/Zithers/Upright%20Piano%2C%20Knight/Sustains/Player_vl1_rr1_F3.wav",
+          "sha256": "9a4e03fa389b7e59ea6b3a6719eef52be8d607844283c7163662030f57b60942",
+          "sample_rate": 44100,
+          "channels": 2,
+          "frames": 745969
+        }
+      ]
+    },
+    {
+      "instrument": "guitar",
+      "repository": "https://github.com/sfzinstruments/karoryfer.shinyguitar",
+      "revision": "57243cca85277dbcc120ce17c6178032f93c80f3",
+      "license_url": "https://raw.githubusercontent.com/sfzinstruments/karoryfer.shinyguitar/57243cca85277dbcc120ce17c6178032f93c80f3/LICENSE",
+      "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "recordings": [
+        {
+          "note": "a2",
+          "url": "https://raw.githubusercontent.com/sfzinstruments/karoryfer.shinyguitar/57243cca85277dbcc120ce17c6178032f93c80f3/Samples/electric/a2_vl2_rr1_2.wav",
+          "sha256": "3381847154cd087a74a4f78692416aa3a7231330c22918afe60cba707319a344",
+          "sample_rate": 44100,
+          "channels": 1,
+          "frames": 310080
+        },
+        {
+          "note": "c3",
+          "url": "https://raw.githubusercontent.com/sfzinstruments/karoryfer.shinyguitar/57243cca85277dbcc120ce17c6178032f93c80f3/Samples/electric/c3_vl2_rr1_2.wav",
+          "sha256": "308a4a5c1f2b52edcd8175013f55d848c047512c2959911219f80324747e3815",
+          "sample_rate": 44100,
+          "channels": 1,
+          "frames": 310080
+        },
+        {
+          "note": "e2",
+          "url": "https://raw.githubusercontent.com/sfzinstruments/karoryfer.shinyguitar/57243cca85277dbcc120ce17c6178032f93c80f3/Samples/electric/e2_vl2_rr1_2.wav",
+          "sha256": "23901140e3acdfd7204e810799ca0f7a958310a7a98783badb0a07ab8c4372d3",
+          "sample_rate": 44100,
+          "channels": 1,
+          "frames": 351424
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "file": "piano-monophonic.wav",
+      "sha256": "8cc3d5fb38c0cfb2ed59e7c10b94ad41437867e7ea70f7fa44fee26953f05b99",
+      "sample_rate": 48000,
+      "channels": 1,
+      "seconds": 7,
+      "gain": 6.722236802044062,
+      "events_seconds_and_source_index": [
+        [
+          0.3,
+          0
+        ],
+        [
+          2.4,
+          1
+        ],
+        [
+          4.5,
+          2
+        ]
+      ],
+      "processing": "average source channels; scipy resample_poly to 48 kHz if needed; truncate to 1.8 s; 5 ms linear attack/80 ms fade; arrange events; normalize peak 0.65; PCM16"
+    },
+    {
+      "file": "piano-polyphonic.wav",
+      "sha256": "464f3407b0b9aeccea536ff87dd98a904c712ac14c05831ab3792fc0c1d6e2d2",
+      "sample_rate": 48000,
+      "channels": 1,
+      "seconds": 7,
+      "gain": 4.5693681578245195,
+      "events_seconds_and_source_index": [
+        [
+          0.3,
+          0
+        ],
+        [
+          0.3,
+          1
+        ],
+        [
+          0.3,
+          2
+        ],
+        [
+          3.5,
+          0
+        ],
+        [
+          3.5,
+          1
+        ],
+        [
+          3.5,
+          2
+        ]
+      ],
+      "processing": "average source channels; scipy resample_poly to 48 kHz if needed; truncate to 1.8 s; 5 ms linear attack/80 ms fade; arrange events; normalize peak 0.65; PCM16"
+    },
+    {
+      "file": "guitar-monophonic.wav",
+      "sha256": "42528c42437b275302b09ce5263ee79947c75637566592c6585d7bba2c7cf4fc",
+      "sample_rate": 48000,
+      "channels": 1,
+      "seconds": 7,
+      "gain": 1.5376517406381498,
+      "events_seconds_and_source_index": [
+        [
+          0.3,
+          0
+        ],
+        [
+          2.4,
+          1
+        ],
+        [
+          4.5,
+          2
+        ]
+      ],
+      "processing": "average source channels; scipy resample_poly to 48 kHz if needed; truncate to 1.8 s; 5 ms linear attack/80 ms fade; arrange events; normalize peak 0.65; PCM16"
+    },
+    {
+      "file": "guitar-polyphonic.wav",
+      "sha256": "97f57629ef59cbc7024c58830b27c493ddeb4aca1056a4f9cddea8857176fcd9",
+      "sample_rate": 48000,
+      "channels": 1,
+      "seconds": 7,
+      "gain": 1.3374669807196329,
+      "events_seconds_and_source_index": [
+        [
+          0.3,
+          0
+        ],
+        [
+          0.3,
+          1
+        ],
+        [
+          0.3,
+          2
+        ],
+        [
+          3.5,
+          0
+        ],
+        [
+          3.5,
+          1
+        ],
+        [
+          3.5,
+          2
+        ]
+      ],
+      "processing": "average source channels; scipy resample_poly to 48 kHz if needed; truncate to 1.8 s; 5 ms linear attack/80 ms fade; arrange events; normalize peak 0.65; PCM16"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+CLASS:: SpectralHybridShift
+summary:: Spectral pitch shifter using the Signalsmith hybrid time-frequency algorithm
+categories:: UGens>Pitch
+related:: Guides/PitchShiftSuite, Classes/PitchShift, Classes/PhaseLockedShift, Classes/WSOLAStretchShift
+
+DESCRIPTION::
+SpectralHybridShift is a high-quality real-time pitch shifter based on the Signalsmith Stretch library. It uses a hybrid time-frequency representation combining subband decomposition with adaptive spectral analysis. By tracking spectral envelopes and phases across frequency bands, it preserves both transients and tonal pitch structure, making it well-suited for both monophonic signals and dense polyphonic material.
+
+Processing is monophonic. To process stereo or multichannel audio, pass an Array of channels for standard SuperCollider multichannel expansion (each channel is processed independently). Pitch shifting introduces latency (approx. 120 ms at 48 kHz).
+
+CLASSMETHODS::
+
+METHOD:: ar
+
+ARGUMENT:: in
+Audio-rate mono input signal.
+
+ARGUMENT:: ratio
+Pitch ratio multiplier (0.5 to 2.0). A ratio of 1.0 represents unchanged pitch, 2.0 shifts up one octave (+12 semitones), and 0.5 shifts down one octave (-12 semitones). Can be a scalar or control-rate signal. Default is 1.0.
+
+returns:: An audio-rate pitch-shifted signal.
+
+EXAMPLES::
+
+SUBSECTION:: Synthetic Signals
+
+code::
+// 1. Monophonic Sine: plays original (220 Hz) then pitch-shifted (ratio 1.5, +7 semitones)
+(
+fork {
+    // Original
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        var shifted = SpectralHybridShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 2. Polyphonic Chord: plays original chord then pitch-shifted
+(
+fork {
+    // Original chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        var shifted = SpectralHybridShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 3. Percussive / Transient: plays original bursts then pitch-shifted
+(
+fork {
+    // Original bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        var shifted = SpectralHybridShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+::
+
+SUBSECTION:: Recorded Audio
+
+code::
+// 4. Monophonic Recorded Sound (Guitar): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        SpectralHybridShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+
+// 5. Polyphonic Recorded Sound (Piano Chords): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        SpectralHybridShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::

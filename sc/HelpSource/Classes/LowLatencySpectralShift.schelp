@@ -1,0 +1,130 @@
+CLASS:: LowLatencySpectralShift
+summary:: Low-latency spectral frame pitch shifter
+categories:: UGens>Pitch
+related:: Guides/PitchShiftSuite, Classes/SpectralHybridShift, Classes/PhaseLockedShift, Classes/WSOLAStretchShift
+
+DESCRIPTION::
+LowLatencySpectralShift is a fast frequency-domain pitch shifter designed specifically for live performance and interactive systems. By employing short asymmetric analysis windows and compact hop sizes, it minimizes algorithmic delay compared to large-window phase vocoders while still operating in the spectral domain.
+
+Processing is monophonic; multichannel expansion applies over Arrays.
+
+CLASSMETHODS::
+
+METHOD:: ar
+
+ARGUMENT:: in
+Audio-rate mono input signal.
+
+ARGUMENT:: ratio
+Pitch ratio multiplier (0.5 to 2.0, scalar). Default is 1.0.
+
+returns:: An audio-rate pitch-shifted signal.
+
+EXAMPLES::
+
+SUBSECTION:: Synthetic Signals
+
+code::
+// 1. Monophonic Sine: plays original (220 Hz) then pitch-shifted (ratio 1.5, +7 semitones)
+(
+fork {
+    // Original
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = SinOsc.ar(220, 0, 0.1);
+        var shifted = LowLatencySpectralShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 2. Polyphonic Chord: plays original chord then pitch-shifted
+(
+fork {
+    // Original chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted chord
+    x = {
+        var sig = Mix(SinOsc.ar([220, 277.18, 329.63], 0, 0.05));
+        var shifted = LowLatencySpectralShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+
+// 3. Percussive / Transient: plays original bursts then pitch-shifted
+(
+fork {
+    // Original bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        sig * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+    2.1.wait;
+
+    // Pitch-shifted bursts
+    x = {
+        var sig = PinkNoise.ar(0.1) * Decay2.ar(Impulse.ar(4), 0.005, 0.15);
+        var shifted = LowLatencySpectralShift.ar(sig, 1.5);
+        shifted * EnvGen.kr(Env.linen(0.05, 1.9, 0.05), doneAction: 2) ! 2;
+    }.play;
+};
+)
+::
+
+SUBSECTION:: Recorded Audio
+
+code::
+// 4. Monophonic Recorded Sound (Guitar): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/guitar-monophonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        LowLatencySpectralShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+
+// 5. Polyphonic Recorded Sound (Piano Chords): original, then pitch-shifted
+(
+fork {
+    var buf = Buffer.read(s, Platform.userExtensionDir +/+ "PitchShiftSuite/HelpSource/Audio/PitchShiftSuite/piano-polyphonic.wav");
+    s.sync;
+
+    // Original
+    x = { PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2) ! 2 }.play;
+    buf.duration.wait;
+
+    // Pitch-shifted
+    x = {
+        var sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), doneAction: 2);
+        LowLatencySpectralShift.ar(sig, 1.5) ! 2;
+    }.play;
+    (buf.duration + 0.2).wait;
+
+    buf.free;
+};
+)
+::

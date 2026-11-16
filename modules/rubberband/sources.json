@@ -1,0 +1,16 @@
+{
+  "version": "4.0.0",
+  "commit": "e4296ac80b1170018a110bc326fd0d45a0eb27d6",
+  "archive_url": "https://codeload.github.com/breakfastquay/rubberband/tar.gz/e4296ac80b1170018a110bc326fd0d45a0eb27d6",
+  "archive_sha256": "32770ab6a395badb6a5ee3443bf5a0cfd5cac07f332af8e03fd6dcd61f5b3759",
+  "license": "GPL-2.0-or-later; commercial alternative not assumed",
+  "selected_build": "single/RubberBandSingle.cpp; BQ resampler, Apple vDSP, no threading",
+  "source_files": {
+    "COPYING": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5",
+    "single/RubberBandSingle.cpp": "991566737e449c3cc0f7b3bf7d7c21dc2b9fc52ea7479fa4165145d220b9a2fb",
+    "rubberband/RubberBandStretcher.h": "deaf2147bd57a72aeec876f8dd76a6e282282d8dd1f52d8aa01f93fa70b5ed44",
+    "src/common/BQResampler.cpp": "50a49325106e4089da964c206ff8dc287f0ad5837465db9571f87c76308a01df",
+    "rubberband/RubberBandLiveShifter.h": "59bbc6f89327beb984558cb0395b4317a3da2af4845937d0e0c8f559aee25fc1",
+    "src/finer/R3LiveShifter.cpp": "d6f28fdb9542d6a509cdde9e9859831ece1426cd489e4f788431fa133fe5172f"
+  }
+}

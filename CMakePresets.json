@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "plugins",
+      "displayName": "Implemented scsynth engines (Rubber Band opt-in)",
+      "binaryDir": "${sourceDir}/build-plugins",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_TESTING": "ON",
+        "PITCH_BUILD_SC": "ON",
+        "PITCH_BUILD_SIGNALSMITH": "ON",
+        "PITCH_BUILD_PHASE_LOCKED": "ON",
+        "PITCH_BUILD_PV_INTEGER": "ON",
+        "PITCH_BUILD_OCEAN": "ON",
+        "PITCH_BUILD_OLA": "ON",
+        "PITCH_BUILD_WSOLA": "ON",
+        "PITCH_BUILD_ERB_PHASE": "ON",
+        "PITCH_BUILD_ERB_SSB": "ON",
+        "PITCH_BUILD_PHASE_HALF": "ON",
+        "PITCH_BUILD_MULTIRATE": "ON",
+        "PITCH_BUILD_SINUSOIDAL": "ON",
+        "PITCH_BUILD_LOW_LATENCY": "ON",
+        "PITCH_BUILD_RUBBERBAND": "OFF"
+      }
+    },
+    {
+      "name": "plugins-rubberband",
+      "inherits": "plugins",
+      "binaryDir": "${sourceDir}/build-plugins-rubberband",
+      "cacheVariables": {
+        "PITCH_BUILD_RUBBERBAND": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "plugins",
+      "configurePreset": "plugins",
+      "configuration": "Release"
+    },
+    {
+      "name": "plugins-rubberband",
+      "configurePreset": "plugins-rubberband",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "plugins",
+      "configurePreset": "plugins",
+      "configuration": "Release",
+      "filter": {
+        "include": {
+          "name": "_smoke$"
+        }
+      },
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "plugins-rubberband",
+      "configurePreset": "plugins-rubberband",
+      "configuration": "Release",
+      "filter": {
+        "include": {
+          "name": "_smoke$"
+        }
+      },
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    }
+  ]
+}
